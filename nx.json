@@ -35,7 +35,6 @@
       "component": {
         "style": "none",
         "pascalCaseFiles": true,
-        "project": "demo",
         "export": false
       },
       "library": {
