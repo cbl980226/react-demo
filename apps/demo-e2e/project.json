@@ -1,0 +1,30 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/demo-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": ["playwright test"],
+        "cwd": "apps/demo-e2e"
+      }
+    },
+    "show-report": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": ["playwright show-report playwright-report"],
+        "cwd": "apps/demo-e2e"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/demo-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["demo"]
+}

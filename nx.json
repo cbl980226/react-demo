@@ -1,0 +1,49 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "npmScope": "react-demo",
+  "affected": {
+    "defaultBase": "test"
+  },
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
+    }
+  },
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"]
+    }
+  },
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "style": "css",
+        "linter": "eslint",
+        "babel": true,
+        "pascalCaseFiles": true
+      },
+      "component": {
+        "style": "none",
+        "pascalCaseFiles": true,
+        "project": "demo",
+        "export": false
+      },
+      "library": {
+        "style": "css",
+        "linter": "eslint",
+        "pascalCaseFiles": true
+      }
+    }
+  },
+  "defaultProject": "demo"
+}
