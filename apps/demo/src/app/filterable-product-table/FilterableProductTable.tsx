@@ -1,11 +1,10 @@
 import { Component, ReactNode } from 'react';
 import { Product } from './mock';
 
-/* eslint-disable-next-line */
 export interface FilterableProductTableProps {
   products: Product[];
 }
-/* eslint-disable-next-line */
+
 export interface FilterableProductTableState {
   filterText: string;
   inStockOnly: boolean;
