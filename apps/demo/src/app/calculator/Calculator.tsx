@@ -10,14 +10,14 @@ import { celsiusToFahrenheit, fahrenheitToCelsius, transformTemperature } from '
 export interface CalculatorProps {}
 
 export class Calculator extends Component<
-  unknown,
+  CalculatorProps,
   {
     scale: ScaleName;
     celsius: string;
     fahrenheit: string;
   }
 > {
-  constructor(props: unknown) {
+  constructor(props: CalculatorProps) {
     super(props);
     this.state = {
       scale: 'celsius',
