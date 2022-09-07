@@ -33,6 +33,7 @@
         "pascalCaseFiles": true
       },
       "component": {
+        "directory": "components",
         "style": "none",
         "pascalCaseFiles": true,
         "export": false
